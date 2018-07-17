@@ -148,3 +148,47 @@ function addEvenMoreExcitement (wordArray) {
     }
 }
 addEvenMoreExcitement(sentence);
+
+//Function Arguments
+//Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an exclamation point.
+
+// I want to use a question mark
+//addExcitement(sentence, "?");
+
+function changeSentence(wordArray, character){
+    let buildMeUpEvenMore = '';
+    let properPlace = 0;
+    let characterContainer = character
+    for (let i = 0; i < wordArray.length; i++) {
+        buildMeUpEvenMore += wordArray[i] + " ";
+        properPlace++;
+        if (properPlace % 3 === 0){
+            buildMeUpEvenMore += characterContainer;
+            characterContainer += character;
+            console.log(buildMeUpEvenMore)
+        } else {
+            console.log(buildMeUpEvenMore)
+        }
+        
+    }
+}
+changeSentence(sentence, "?");
+
+//Another Sentence
+//Now you should define another variable that will hold an array of different words than your existing sentence. Perhaps name the variable betterSentence, or nextSentence.
+
+//Invoke your function for a second time, passing in the new sentence variable and a different special character.
+
+// Example
+//addExcitement(nextSentence, "&");
+
+const betterSentence = ["I", "wish", "javascript", "made", "so", "much", "more", "sense", "to", "me", "than", "it", "currently", "does", "now"];
+
+changeSentence(betterSentence, "? ");
+
+//Challenge: Arrow Functions
+//Watch the video about arrow functions, and see if you can rewrite addExcitement //using that syntax.
+
+// Complete this arrow function template to make your
+// function work with it.
+//let addExcitement = () => { };
